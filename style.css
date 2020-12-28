@@ -1,9 +1,294 @@
+@font-face
+{
+    font-family: 'ralewayregular';
+    src: url(raleway/Raleway-Regular.ttf) format('truetype');
+}
 *
-{color: #000;}
-.filters
-{display: flex;
+{
+    color: #000; 
+    font-family: 'ralewayregular', Arial, Helvetica, sans-serif;
+    text-decoration-line: none;
+}
+html
+{
+   padding-left: 20px;
+    padding-right: 5px;
+}
+h1, h2 
+{
+    font-size: 20px;
+}
+h3 
+{
+    font-size: 15px;
+}
+p 
+{
+    font-size: small;
+}
+header
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 0;
+    padding-top: 0;
+}
+header ul
+{
+    list-style-type: none;
+    display: flex;
+    margin-top: 0;
+    padding-top: 0;
+}
+header li
+{
+    margin: 10px;
+    padding: 5px;
+}
+header li:hover
+{
+    border-top: 2px solid #0065fc;
+    padding: 29px;
+}
+@media all and (max-width:500px)
+{
+    header {
+        flex-direction: column;
+    }
+    header nav {
+        width: 100%;
+    }
+    header ul {
+        position:relative;
+        padding-left: 0;
+        padding-top: 20px;
+        border-bottom: 2px solid #f2f2f2;
+    }
+    .navig:hover{
+        border-bottom: 2px solid #0065fc;
+        border-top: white;
+        margin: 0;
+    }
+    .navig {
+        width: 50%;
+        margin: 0;
+        text-align: center;
+    }
+    #signup {
+        position: absolute;
+        right:0;
+        top:-50px;
+    }  
+    #signup:hover{
+        border-top: white;
+    }
+}
+#search
+{
+    margin: 0;
+    padding: 0;
+}
+.contsearch
+{
+    display: flex;
+} 
+.location
+{
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px 1px 1px 8px;
+}
+#textbutton
+{
+   display: block;
+   color: white;
+}
+button
+{
+    background-color: #0065fc; 
+    border: none;
+    border-radius: 1px 15px 15px 1px;
+}
+.iconbutton
+{
+   display: none;
+   background-color: #0065fc;
+}
+@media all and  (max-width:500px)
+{
+    #textbutton
+     {
+        display: none;
+    }
+    .iconbutton
+     {
+        display: block;
+    }
+    button
+    {
+        border-radius: 10px;
+        border: 2px solid #0065fc;
+    }
+    .white
+    {
+        color: white;
+    }
+}
+#filters
+{
+    display: flex;
+    flex-wrap: wrap;
 }
 .filtre
-{border: 1px gray solid;
-border-radius: 10px;
+{
+    border: 3px #f2f2f2 solid; 
+    border-radius: 40px;
+    font-size: larger;
+    margin: 4px;
+    padding-right: 10px;
+    padding-left: 0;
+    font-weight: bold;
+    font-size: 15px;
+}
+.icon 
+{
+    color: #0065fc;
+    border-radius: 60px;
+    background-color: #deebff;
+    padding: 10px 13px;
+    box-sizing: content-box;
+} 
+.info
+{
+    color: #0065fc;
+    border: 2px #f2f2f2 solid;
+    border-radius: 50%; 
+    padding: 4px 8px;  
+    margin: 5px;
+}
+section.box
+{
+    display: flex;
+    flex-direction: row-reverse;
+}
+aside.boxp
+{
+    display: flex;
+    background-color: #f2f2f2;
+    flex-direction: column;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 30px;
+}
+.imgp {
+    width: 300px;
+    height: 300px;
+    border: 1px solid;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img7
+{
+    background-image: url("small.h/soleil.jpg");
+}
+.img8
+{
+    background-image: url("small.h/coeur.jpg");
+}
+.img9
+{
+    background-image: url("small.h/blanc.jpg");
+}
+.boxh
+{
+    display: flex;
+    background-color: #f2f2f2;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 30px;
+    flex-flow: row wrap;
+}
+.imgh {
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img1
+{
+    background-image: url("small.h/cannebiere.jpg");
+}
+.img2
+{
+    background-image: url("small.h/port.jpg");
+}
+.img3
+{
+    background-image: url("small.h/mouette.jpg");
+}
+.img4
+{
+    background-image: url("small.h/mer.jpg");
+}
+.img5
+{
+    background-image: url("small.h/panier.jpg");
+}
+.img6
+{
+    background-image: url("small.h/amina.jpg");
+}
+section.boxa
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.imga {
+    width: 300px;
+    height: 300px;
+    border: 1px solid;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.imgb
+{
+    background-image: url("small.a/vport.jpg");
+}
+.imgc
+{
+    background-image: url("small.a/fort.jpg");
+}
+.imgd
+{
+    background-image: url("small.a/frioul.jpg");
+}
+.imge
+{
+    background-image: url("small.a/calanque.jpg");
+}
+.imgf
+{
+    background-image: url("small.a/ndame.jpg");
+}
+.imgg
+{
+    background-image: url("small.a/parc.jpg");
+}
+footer
+{
+    display: flex;
+    background-color: #f2f2f2;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@media all and (max-width: 500px)
+{
+    footer
+       { flex-direction: column;
+    }
 }
