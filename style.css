@@ -9,21 +9,31 @@
     font-family: 'ralewayregular', Arial, Helvetica, sans-serif;
     text-decoration-line: none;
 }
-html
+body
 {
-   padding-left: 20px;
-    padding-right: 5px;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 40px;
 }
-@media all and (max-width:500px)
+@media all and (max-width:375px)
 {
-    html
+   body
     {
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    header img
+    {
+        padding-left: 20px;
+    }
+    #find
+    {
+        padding: 15px;
     }
 }
 h1, h2 
 {
-    font-size: 20px;
+    font-size: 23px;
 }
 h3 
 {
@@ -31,7 +41,7 @@ h3
 }
 p 
 {
-    font-size: small;
+    font-size: 16px;
 }
 header
 {
@@ -43,69 +53,90 @@ header ul
 {
     list-style-type: none;
     display: flex;
-    margin-top: 0;
+    margin: 0;
+    /*! justify-content: space-between; */
 }
 header li
 {
-    margin: 10px;
-    padding: 5px;
+    padding: 20px;
 }
 header li:hover
 {
     border-top: 2px solid #0065fc;
-    padding: 29px;
 }
-@media all and (max-width:500px)
+#signup a
+{
+        color: #0065fc;
+        font-weight: bold;   
+}
+header .navig a:hover
+{
+        color: #0065fc;
+}
+@media all and (max-width:375px)
 {
     header {
         flex-direction: column;
+        padding-top: 10px;
     }
     header nav {
         width: 100%;
+        justify-content: space-evenly;
     }
-    header ul {
+    header ul
+    {
+        padding: 0;
+    }
+    header li {
         position:relative;
-        padding-left: 0;
-        padding-top: 20px;
         border-bottom: 2px solid #f2f2f2;
+        padding-bottom: 10px;
     }
-    header ul:hover {
+    header li:hover {
         border-bottom: 2px solid #0065fc;
-        border-top: white;
+        border-top: none;
     }
     .navig {
         width: 50%;
         margin: 0;
-        text-align: center;
+        text-align:center;
     }
     #signup {
         position: absolute;
-        right:0;
-        top:-50px;
+        right: 0;
+        top: 0;
+        color: #0065fc;
+        border-bottom: none;
     }  
-    #signup:hover{
-        border-top: white;
+    #signup:hover
+    {
+        border-bottom: 2px solid #0065fc;
     }
 }
 #search
 {
     margin: 0;
     padding: 0;
+    border: 1px #f2f2f2 solid; 
 }
 .contsearch
 {
     display: flex;
-} 
+    margin: 20px 0;
+}
 .location
 {
-    padding: 10px;
     background-color: #f2f2f2;
-    border-radius: 8px 1px 1px 8px;
+    border-radius: 15px 1px 1px 15px;
+    padding: 15px 17px;
 }
 #textbutton
 {
    display: block;
    color: white;
+    margin: 7px;
+    font-weight: bold;
+    font-size: 15px
 }
 button
 {
@@ -118,7 +149,7 @@ button
    display: none;
    background-color: #0065fc;
 }
-@media all and  (max-width:500px)
+@media all and  (max-width:375px)
 {
     #textbutton
      {
@@ -127,27 +158,40 @@ button
     .iconbutton
      {
         display: block;
+        padding: 13px 7px;     
     }
     button
     {
-        border-radius: 10px;
+        border-radius: 14px;
         border: 2px solid #0065fc;
+        position: absolute;
+        right: 0;
     }
     .white
     {
         color: white;
+    }
+    div.contsearch
+    {
+       margin : 0px 25px 10px 20px;
+        position: relative;
+    }  
+    #search
+    {
+        flex-grow: 2;
+        border-radius: 0px 20px 20px 0px;
     }
 }
 #filters
 {
     display: flex;
     flex-wrap: wrap;
+    margin: 20px 0;
 }
 .filtre
 {
     border: 3px #f2f2f2 solid; 
     border-radius: 40px;
-    font-size: larger;
     margin: 4px;
     padding-right: 10px;
     padding-left: 0;
@@ -157,11 +201,30 @@ button
 .icon 
 {
     color: #0065fc;
-    border-radius: 60px;
+    border-radius: 50px;
     background-color: #deebff;
     padding: 10px 13px;
-    box-sizing: content-box;
-} 
+}
+@media all and (max-width:375px)
+{
+    #filters>h3
+    {
+        width: 100%; 
+        padding-left: 20px;
+        font-size: 17px;
+    }
+    .filtre
+    {
+        box-sizing: border-box;
+        margin: 5px;
+        padding-right: 20px;
+    }
+    .icon
+    {
+        font-size: 17px;
+        padding: 15px;
+    }
+}
 .info
 {
     color: #0065fc;
@@ -170,22 +233,184 @@ button
     padding: 4px 8px;  
     margin: 5px;
 }
-.accomodation
+@media all and (max-width:375px)
+{
+    .box
+    {
+        flex-wrap: wrap-reverse;
+    }
+    .box .boxh
+    {
+        background-color: white;
+        padding: 0;
+        margin: 0;
+    }
+    .accomodation
+    {
+        width: 330px;
+    }
+    .box .boxp
+    {
+        border-radius: 0;
+        padding: 0;
+    }   
+    .popular
+    {
+        width: 330px;
+    }
+    .boxa
+    {
+        padding: 5px;
+    }
+    .activities
+    {
+        height: 180px;
+        width: 335px;
+        margin: 10px;
+    }
+    .activities .imga
+    {
+        height: 135px;
+        width:335px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+body .box
 {
     display: flex;
-    flex-direction: column;
+    align-items: baseline;
+}
+.boxh
+{
+    display: flex;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 10px;
+}
+.accomodation
+{
     background-color: white;
-    margin: 5px;
     padding: 5px;
+    margin: 5px 15px 5px 15px;
     border-radius: 20px;
+    box-shadow: 10px 10px 30px #f2f2f2;
+    height: 190px;
+}
+.boxp
+{ 
+    display: flex;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.popular
+{
+    background-color: white;
+    border-radius: 20px;
+    padding: 4px;
+    box-shadow: 0 0 10px #f2f2f2;
+    height: 135px;
+    width: 335px;
+    margin: 5px 15px 5px 15px;
+}
+.boxp h2
+{
+    align-self: flex-start;
+}
+.boxp .chart
+{
+    align-self: end;
+}
+.boxh h2
+{
+    width: 100%;
+}
+.boxh>p
+{
+    padding-left: 20px;
+    font-weight: bold;
+    width: 100%;
+}
+.accomodation h4
+{
+    margin: 5px;
+}
+.accomodation p
+{
+    margin: 5px;
+    font-size: 15px;
+}
+.accomodation .price
+{
+    font-weight: bold;
+}
+.accomodation .stars
+{
+    font-size: 12px;
+    margin: 5px;
 }
 .imgh {
-    width: 200px;
-    height: 100px;
+    height: 110px;
     border-radius: 20px 20px 1px 1px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+.popular h4
+{
+    padding: 20px 0px 0px 10px;
+    margin :0;
+}
+.popular .stars
+{
+    font-size: 12px;
+    margin: 20px;
+}
+aside .imgp {
+    width: 120px;
+    height: 130px;
+    border-radius: 20px 1px 1px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: left;
+}
+section.boxa
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.boxa .activities
+{
+    border-radius: 20px;
+    box-shadow: 5px 5px 7px #f2f2f2;
+    margin: 15px;
+}
+.boxa h2
+{
+    width: 100%;
+}
+.imga {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px 20px 0px 0px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.stars .blue
+{
+    color: #0065fc;
+}
+.stars .blank
+{
+    color: #f2f2f2;
 }
 .img1
 {
@@ -211,53 +436,6 @@ button
 {
     background-image: url("image/small.h/amina.jpg");
 }
-aside.boxp
-{
-    display: flex;
-    background-color: #f2f2f2;
-    flex-direction: column;
-    margin: 30px;
-    padding: 30px;
-    border-radius: 15px;
-}
-@media all and (max-width:500px)
-{
-    aside.boxp
-    {
-        margin:0;
-        padding: 0;
-        border-radius :0px;
-    }
-}
-aside .imgp {
-    width: 150px;
-    height: 150px;
-    border: 3px white solid;
-    border-radius: 20px 1px 1px 20px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-aside .popular
-{
-    display: flex;
-    background-color: white;
-    border-radius: 20px;
-    margin: 15px;
-    padding-right: 50px;
-}
-.popular .content
-{
-    padding-left: 20px;
-}
-.stars .blue
-{
-    color: #0065fc;
-}
-.stars .blank
-{
-    color: #f2f2f2;
-}
 .img7
 {
     background-image: url("image/small.h/soleil.jpg");
@@ -269,28 +447,6 @@ aside .popular
 .img9
 {
     background-image: url("image/small.h/blanc.jpg");
-}
-.boxh
-{
-    display: flex;
-    background-color: #f2f2f2;
-    margin: 30px;
-    padding: 30px;
-    border-radius: 15px;
-    flex-flow: row wrap;
-}
-section.boxa
-{
-    display: flex;
-    flex-wrap: wrap;
-}
-.imga {
-    width: 300px;
-    height: 300px;
-    border: 1px solid;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 .imgb
 {
@@ -321,11 +477,14 @@ footer
     display: flex;
     background-color: #f2f2f2;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-left:20px;
+    padding-right: 200px;
 }
-@media all and (max-width: 500px)
+@media all and (max-width: 375px)
 {
     footer
        { flex-direction: column;
+           padding: 30px;
     }
 }
