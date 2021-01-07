@@ -11,37 +11,11 @@
 }
 body
 {
-    margin: 0;
-    padding-left: 20px;
-    padding-right: 40px;
+    margin: auto;
 }
-@media all and (max-width:375px)
-{
-   body
-    {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    header img
-    {
-        padding-left: 20px;
-    }
-    #find
-    {
-        padding: 15px;
-    }
-}
-h1, h2 
+h2 
 {
     font-size: 23px;
-}
-h3 
-{
-    font-size: 15px;
-}
-p 
-{
-    font-size: 16px;
 }
 header
 {
@@ -49,12 +23,15 @@ header
     align-items: flex-start;
     justify-content: space-between;
 }
+header img
+{
+    padding-left: 30px;
+}
 header ul
 {
     list-style-type: none;
     display: flex;
     margin: 0;
-    /*! justify-content: space-between; */
 }
 header li
 {
@@ -63,6 +40,10 @@ header li
 header li:hover
 {
     border-top: 2px solid #0065fc;
+}
+#signup
+{
+    margin-right: 40px;
 }
 #signup a
 {
@@ -77,7 +58,7 @@ header .navig a:hover
 {
     header {
         flex-direction: column;
-        padding-top: 10px;
+        padding-top: 20px;
     }
     header nav {
         width: 100%;
@@ -90,7 +71,7 @@ header .navig a:hover
     header li {
         position:relative;
         border-bottom: 2px solid #f2f2f2;
-        padding-bottom: 10px;
+        padding-bottom: 10px; 
     }
     header li:hover {
         border-bottom: 2px solid #0065fc;
@@ -107,22 +88,27 @@ header .navig a:hover
         top: 0;
         color: #0065fc;
         border-bottom: none;
+        margin-top: 15px;
     }  
     #signup:hover
     {
         border-bottom: 2px solid #0065fc;
     }
 }
+#find
+    {
+        padding: 0px 30px 0px 30px;
+    }
 #search
 {
     margin: 0;
-    padding: 0;
+    padding: 0px 50px ;
     border: 1px #f2f2f2 solid; 
 }
 .contsearch
 {
     display: flex;
-    margin: 20px 0;
+    padding-left: 30px;
 }
 .location
 {
@@ -135,6 +121,7 @@ header .navig a:hover
    display: block;
    color: white;
     margin: 7px;
+    padding: 0px 10px;
     font-weight: bold;
     font-size: 15px
 }
@@ -173,7 +160,7 @@ button
     }
     div.contsearch
     {
-       margin : 0px 25px 10px 20px;
+       margin : 0px 25px 10px 0px;
         position: relative;
     }  
     #search
@@ -187,37 +174,39 @@ button
     display: flex;
     flex-wrap: wrap;
     margin: 20px 0;
+    padding-left: 30px;
+    align-items: baseline;
+    font-size: 15px;
 }
 .filtre
 {
     border: 3px #f2f2f2 solid; 
     border-radius: 40px;
-    margin: 4px;
-    padding-right: 10px;
-    padding-left: 0;
+    margin-left: 30px;
+    padding: 0px 20px 0px 0px;
     font-weight: bold;
     font-size: 15px;
+    box-sizing: border-box;
 }
 .icon 
 {
     color: #0065fc;
     border-radius: 50px;
     background-color: #deebff;
-    padding: 10px 13px;
+    padding: 15px 16px;
+    margin-right: 10px;
 }
 @media all and (max-width:375px)
 {
     #filters>h3
     {
         width: 100%; 
-        padding-left: 20px;
-        font-size: 17px;
     }
     .filtre
     {
         box-sizing: border-box;
-        margin: 5px;
-        padding-right: 20px;
+        margin: 10px 0px 0px 10px;
+        padding-right: 15px;
     }
     .icon
     {
@@ -225,13 +214,17 @@ button
         padding: 15px;
     }
 }
+#information
+{
+    padding: 10px 0px 20px 30px ;
+}
 .info
 {
     color: #0065fc;
     border: 2px #f2f2f2 solid;
     border-radius: 50%; 
     padding: 4px 8px;  
-    margin: 5px;
+    margin-right: 5px;
 }
 @media all and (max-width:375px)
 {
@@ -242,45 +235,44 @@ button
     .box .boxh
     {
         background-color: white;
-        padding: 0;
         margin: 0;
     }
     .accomodation
     {
         width: 330px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 20px #f2f2f2;
+        border-radius: 20px;
+        padding: 5px;
     }
     .box .boxp
     {
         border-radius: 0;
-        padding: 0;
+        margin: 0;
+        padding: 5px;       
     }   
     .popular
     {
         width: 330px;
     }
-    .boxa
+}
+@media all and (min-width:500px)
+{
+    .accomodation
     {
-        padding: 5px;
-    }
-    .activities
-    {
-        height: 180px;
-        width: 335px;
-        margin: 10px;
-    }
-    .activities .imga
-    {
-        height: 135px;
-        width:335px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        height: 190px;
+        width: 230px;
+        background-color: white;
+        padding: 4px 4px 0 4px;
+        margin: 15px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px #f2f2f2;
+        font-size: 15px;
     }
 }
 body .box
 {
     display: flex;
-    align-items: baseline;
 }
 .boxh
 {
@@ -288,17 +280,9 @@ body .box
     background-color: #f2f2f2;
     border-radius: 15px;
     flex-wrap: wrap;
-    margin: 20px;
-    padding: 10px;
-}
-.accomodation
-{
-    background-color: white;
-    padding: 5px;
-    margin: 5px 15px 5px 15px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 30px #f2f2f2;
-    height: 190px;
+    margin: 30px;
+    margin-bottom: 0;
+    padding-left: 20px;
 }
 .boxp
 { 
@@ -307,44 +291,49 @@ body .box
     border-radius: 15px;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 30px;
+    margin: 30px 40px 0px 20px;
+    padding: 10px;
 }
 .popular
 {
     background-color: white;
     border-radius: 20px;
-    padding: 4px;
+    padding: 3px 0 0 3px;
     box-shadow: 0 0 10px #f2f2f2;
     height: 135px;
     width: 335px;
-    margin: 5px 15px 5px 15px;
+    margin: 5px 15px 20px 15px;
 }
 .boxp h2
 {
-    align-self: flex-start;
+    padding-left: 20px;
+    padding-right: 25px;
+    display: flex;
+    justify-content: space-between;
 }
-.boxp .chart
+h2 .chart
 {
-    align-self: end;
+    font-size: 20px;
 }
 .boxh h2
 {
     width: 100%;
+    padding-left: 10px;
 }
 .boxh>p
 {
-    padding-left: 20px;
     font-weight: bold;
     width: 100%;
+    padding-left: 15px;
 }
 .accomodation h4
 {
-    margin: 5px;
+    margin : 7px 15px;
 }
 .accomodation p
 {
-    margin: 5px;
-    font-size: 15px;
+    margin: 7px 15px;
+    font-size: 13px;
 }
 .accomodation .price
 {
@@ -353,24 +342,29 @@ body .box
 .accomodation .stars
 {
     font-size: 12px;
-    margin: 5px;
+    margin: 7px 15px;
 }
 .imgh {
     height: 110px;
-    border-radius: 20px 20px 1px 1px;
+    border-radius: 15px 15px 1px 1px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .popular h4
 {
-    padding: 20px 0px 0px 10px;
-    margin :0;
+    font-size: 15px;
+    margin: 15px 40px 5px 0px;
+}
+.popular p
+{
+    font-size: 13px;
+    margin: 0;
 }
 .popular .stars
 {
     font-size: 12px;
-    margin: 20px;
+    margin-top: 40px;
 }
 aside .imgp {
     width: 120px;
@@ -380,29 +374,112 @@ aside .imgp {
     background-position: center;
     background-repeat: no-repeat;
     float: left;
+    margin-right: 15px;
 }
 section.boxa
 {
     display: flex;
     flex-wrap: wrap;
-}
-.boxa .activities
-{
-    border-radius: 20px;
-    box-shadow: 5px 5px 7px #f2f2f2;
-    margin: 15px;
+    margin: 40px 0px 20px 0px;
 }
 .boxa h2
 {
     width: 100%;
+    padding-left: 30px;
+    margin: 0;
 }
-.imga {
+@media all and (min-width:500px)
+{
+    .boxa .activities {
+    border-radius: 20px;
+    box-shadow: 5px 5px 7px #f2f2f2;
+    margin: 30px 0px 0px 27px;;
+    }
+    .imga {
     width: 300px;
     height: 200px;
     border-radius: 20px 20px 0px 0px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    }
+    .activities:nth-of-type(3n+1)
+    {
+        height: 445px;
+    }
+    .imgb
+    {
+        height: 390px;
+    }
+    .imge {
+        height: 390px;
+    }
+    .activities:nth-child(3)
+    {
+        height: 240px;
+    }
+    .imgc
+    {
+        height: 180px;
+    }
+    .activities:nth-child(4)
+    {
+        height: 165px;
+        align-self: end;
+        position: absolute;
+        left: 340px;
+    }
+    .imgd
+    {
+        height: 110px;
+    }
+    .activities:nth-child(6)
+    {
+        height: 195px;
+    }
+    .imgf
+    {
+        height: 140px;
+    }
+    .activities:nth-child(7)
+    {
+        height: 210px;
+        position: absolute;
+        align-self: end;
+        right: 40px;
+    }
+    .imgg {
+        height: 155px; 
+    }
+}
+@media all and (max-width:375px)
+{
+ .boxa
+    {
+        padding: 5px;
+    }
+    .activities
+    {
+        height: 180px;
+        width: 335px;
+        margin: 10px;
+         border-radius: 20px;
+        box-shadow: 5px 5px 7px #f2f2f2;
+    }
+    .activities .imga
+    {
+        height: 135px;
+        width:335px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 20px 20px 0px 0px;
+    }
+}
+.activities h4
+{
+    font-size: 15px;
+    margin: 15px;
 }
 .stars .blue
 {
@@ -478,13 +555,14 @@ footer
     background-color: #f2f2f2;
     flex-direction: row;
     justify-content: space-between;
-    padding-left:20px;
+    padding-left:30px;
     padding-right: 200px;
+    margin-top: 40px;
 }
 @media all and (max-width: 375px)
 {
     footer
        { flex-direction: column;
-           padding: 30px;
+           padding: 30px; 
     }
 }
